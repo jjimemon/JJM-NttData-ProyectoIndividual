@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Search System</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</head>
+		<body class="card-body">
+		<div class="card text-white bg-dark mb-3">
+		  <div class="card-header">Search Dual-Manager.</div>
+		  <div class="card-body">
+				<form th:action="@{./dualManagerFound}"  method="POST">
+					<div class="form-group">
+			  			<label for="inpCarRegistration">Manager DNI</label>
+			  			<input type="text" required="required" class="form-control" id="inpTcarRegistration" name="DNI" placeholder="20045899B">
+					</div>
+					<button type="submit" name="btnCreateCar" class="btn btn-success">Search</button>
+				</form>
+			  </div>
+			</div>
+	</body>
+</html>

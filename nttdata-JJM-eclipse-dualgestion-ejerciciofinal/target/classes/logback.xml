@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<!-- OUTPUT CONFIGURATION -->
+	<appender name="Salida1"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>C://Users//javie//Desktop//escritorio//LOGS//logs.log</file>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>C://Users//javie//Desktop//escritorio//LOGS//logs.%i.zip
+			</fileNamePattern>
+			<minIndex>1</minIndex> <!-- MIN FILES -->
+			<maxIndex>3</maxIndex> <!-- MAX FILES -->
+		</rollingPolicy>
+		<!-- How often will create a file with the following part of the logs -->
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>50KB</maxFileSize> <!-- File size -->
+		</triggeringPolicy>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - [%method]
+				-%msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<!-- ROOT LOGGER -->
+	<root level="info">
+		<appender-ref ref="Salida1" />
+	</root>
+
+</configuration>

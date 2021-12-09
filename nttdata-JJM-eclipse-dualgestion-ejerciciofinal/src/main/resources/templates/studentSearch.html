@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Search System</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</head>
+		<body class="card-body">
+		<div class="card text-white bg-dark mb-3">
+		  <div class="card-header">Search Student.</div>
+		  <div class="card-body">
+				<form th:action="@{./studentFound}" method="POST">
+					<div class="form-group">
+			  			<label for="SearchStudent">Student DNI</label>
+			  			<input type="text" required="required" class="form-control" id="SearchStudent" name="DNI" placeholder="20045899B">
+					</div>
+					<button type="submit" name="btnSearchStudent" class="btn btn-success">Search</button>
+				</form>
+			  </div>
+			</div>
+	</body>
+</html>
