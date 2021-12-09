@@ -1,0 +1,6 @@
+ -Cambiar la ubicacion en la cual te generará el archivo log antes de lanzar la aplicación.
+
+ -La consulta con JPA esta montada con un JOIN, pero solo lo hice de muestra, ya que solo hago uso de un parámetro
+atacando solo a una tabla, para atacar a ambas solo hace falta montar otro predicado y añadirlo al CQUERY antes de lanzarlo.
+
+ 
